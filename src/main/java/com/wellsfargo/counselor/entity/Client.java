@@ -6,29 +6,29 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Advisor{
+public class Client{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long advisorId;
+    private Long clientId;
     private String name;
     private String contactInfo;
 
-    public Advisor() {
+    public Client() {
     }
 
-    public Advisor(String name, String contactInfo) {
+    public Client(String name, String contactInfo) {
         this.name = name;
         this.contactInfo = contactInfo;
     }
 
     // Getters and setters
 
-    public Long getAdvisorId() {
-        return advisorId;
+    public Long getClientId() {
+        return clientId;
     }
 
-    public void setAdvisorId(Long advisorId) {
-        this.advisorId = advisorId;
+    public void setClientId(Long clientId) {
+        this.clientId = clientId;
     }
 
     public String getName() {
@@ -47,3 +47,4 @@ public class Advisor{
         this.contactInfo = contactInfo;
     }
 }
+
